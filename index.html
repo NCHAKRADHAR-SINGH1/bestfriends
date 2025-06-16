@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Close Friends</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      background-attachment: fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #2d2d2d;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .friend-box {
+      background: white;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 350px;
+      margin: 15px 0;
+      padding: 20px;
+      font-size: 1.2em;
+      font-weight: 500;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border: 2px solid transparent;
+    }
+
+    .friend-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      border-color: #f9b457;
+    }
+
+    .content {
+      margin-top: 30px;
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 700px;
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #444;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .content h2 {
+      margin-top: 0;
+      color: #f19143;
+    }
+
+    @media (max-width: 480px) {
+      .friend-box {
+        font-size: 1em;
+        padding: 15px;
+      }
+
+      .content {
+        font-size: 1em;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>My Close Friends(best friends)</h1>
+
+  <div class="friend-box" onclick="showProfile('hemanth')">1. Hemanth</div>
+  <div class="friend-box" onclick="showProfile('gnan')">2. Gnan (Pandaa)</div>
+  <div class="friend-box" onclick="showProfile('yuva')">3. Yuva</div>
+
+  <div class="content" id="profileContent">
+    <p>Click on a friend to view what I feel about them 💬</p>
+  </div>
+
+  <script>
+    const profiles = {
+      hemanth: `
+        <h2>Hemanth</h2>
+        <p> first trusted person among all friends  </p>
+        <p>naa sontha anna...chaala manchi vaadu,em chesina iddharam chese dorikipotham chinnpati nundi  🤝</p>
+        <p>nakkana chaala manchi vaadu...asalu chaduvuthaadu veedu....super ante super gaa chaduvuthaadu,concept easy gaa grasp cheseygalthadu anni cheppistaadu concepts 😊</p>
+        <p>He understands me better than most people 💡</p>
+        <p>intelligent person </p>
+        <p>chaala ardham chesukuntaadu nannu andharikanna....</p>
+        
+
+      `,
+      gnan: `
+        <h2>Gnan akkaa/pandaaa 😇</h2>
+        <p> second most trusted person among all friends </p>
+        <p> naa sontha akka la feel avuthanu...of course she is a part of my family too 😊❤️</p>
+        <p>Chaala matured na akka...but I still remember nannu maths study hour lo lepaaru meeru 😂📚🤕 chaala kopam vacchindhi 😄🤣</p>
+        <p>Chaala baaga matladutaaru naatho...caring kuda ❤️</p>
+        <p>Meeru idhi chaduvuthunte...oka msg akka: <strong>\"Baaga chaduvukundham iddhaaram 😊📖✨\"</strong></p>
+        <p>Meeku thelisinavi naaku share cheyandi...naaku thelisindhi nenu chare chestha, meeke ekkuva thelusu 🔥</p>
+        <p>Ayina asalu anukole akka...meetho intha baaga matladagalanu ani, chaala manchi ammai naa akka 🌟</p>
+        <p>Ippudu clg works valla busy aypoyaru ani telusukunna 📚...baaga chadavandi akkaa, all the best pandaa ✨</p>
+      `,
+      yuva: `
+        <h2>Yuva</h2>
+        <p>Yuva kuda manchi ammai, chaala supportive and motivation isthu vuntundhi hardest time lo </p>
+        <p>Chaala matured Yuva, baga matladuthaaru </p>
+        <p>Joke joke gaa baaga matladuthundhi 😄🤣</p>
+        <p>Mee bf tho parichayam cheypinchu raa 😂</p>
+        <p>Chaala caring Yuva sisteruuu ❤️</p>
+        <p>csk fan😂,next koduthundhi lendi cup 😂 </p>
+        <p>Chaala baaga chaduvukoni manchi position lo vundalani korukuntunna 📚</p>
+      `
+    };
+
+    function showProfile(name) {
+      document.getElementById('profileContent').innerHTML = profiles[name];
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
